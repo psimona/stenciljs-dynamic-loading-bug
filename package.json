@@ -4,11 +4,23 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "npm run install-a && npm run install-b",
+    "install-a": "cd src/context-a && npm install",
+    "install-b": "cd src/context-b && npm install",
+    "start": "run-s build-a build-b copy-a-to-www copy-b-to-www start-www",
+    "build-a": "cd src/context-a && npm run build",
+    "build-b": "cd src/context-b && npm run build",
+    "copy-a-to-www": "shx cp -Rf src/context-a/www/build/* www/context-a",
+    "copy-b-to-www": "shx cp -Rf src/context-b/www/build/* www/context-b",
+    "start-www": "node index.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "npm-run-all": "^4.1.3",
+    "open": "0.0.5",
+    "shx": "^0.2.2"
   }
 }

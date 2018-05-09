@@ -1,5 +1,5 @@
 exports.config = {
-  namespace: 'mycomponent',
+  namespace: 'component-a',
   outputTargets:[
     { 
       type: 'dist' 

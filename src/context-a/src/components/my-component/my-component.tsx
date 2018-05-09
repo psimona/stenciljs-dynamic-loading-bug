@@ -1,11 +1,11 @@
 import { Component, Prop } from '@stencil/core';
 
 @Component({
-  tag: 'my-component',
+  tag: 'my-component-a',
   styleUrl: 'my-component.css',
   shadow: true
 })
-export class MyComponent {
+export class MyComponentA {
 
   @Prop() first: string;
   @Prop() last: string;
@@ -13,7 +13,7 @@ export class MyComponent {
   render() {
     return (
       <div>
-        Hello, World! I'm {this.first} {this.last}
+        Hello, World from my-component-a! I'm {this.first} {this.last}
       </div>
     );
   }

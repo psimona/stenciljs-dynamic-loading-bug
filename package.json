@@ -11,8 +11,8 @@
     "start": "run-s build-a build-b copy-a-to-www copy-b-to-www start-www",
     "build-a": "cd src/context-a && npm run build",
     "build-b": "cd src/context-b && npm run build",
-    "copy-a-to-www": "shx cp -Rf src/context-a/www/build/* www/context-a",
-    "copy-b-to-www": "shx cp -Rf src/context-b/www/build/* www/context-b",
+    "copy-a-to-www": "shx cp -Rf src/context-a/www/build/* www-express/context-a",
+    "copy-b-to-www": "shx cp -Rf src/context-b/www/build/* www-express/context-b",
     "start-www": "node index.js"
   },
   "author": "",

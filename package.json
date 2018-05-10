@@ -13,7 +13,8 @@
     "build-b": "cd src/context-b && npm run build",
     "copy-a-to-www": "shx cp -Rf src/context-a/www/build/* www-express/context-a",
     "copy-b-to-www": "shx cp -Rf src/context-b/www/build/* www-express/context-b",
-    "start-www": "node index.js"
+    "start-www": "node index.js",
+    "clean": "shx rm -rf www-express/context-a/c* www-express/context-b/c*"
   },
   "author": "",
   "license": "ISC",
